@@ -2,18 +2,18 @@ let x1 = 100;     // x position of the ball
 let y1 = 0;       // y position of the ball
 let x1Speed = 3;  // speed in X direction
 let y1Speed = 7; // speed in Y direction
-let d1 = 20;      // diameter of the ball
+let d1 = 100;      // diameter of the ball
 
 let x2 = 150;     // x position of the ball
 let y2 = 50;       // y position of the ball
 let x2Speed = 3;  // speed in X direction
-let y2Speed = 7; // speed in Y direction
+let y2Speed = 9; // speed in Y direction
 let d2 = 50;      // diameter of the ball
 
 let x3 = 110 
 let y3 = 5
 let x3Speed = 3
-let y3Speed = 9
+let y3Speed = 13
 
 
 
@@ -58,18 +58,35 @@ function draw() {
   }
   ellipse(x2, y2, d2); 
 
-  
-  if (x3 > width || x3 < 0) {
+  if ((keyIsPressed == true) && (key == 'a'))
+  {
+    
+  if (x3 > width || x3 < 0) 
+    {
     x3Speed = x3Speed * -1;  
-  }
-  x3 = x3 + x3Speed; // adding a negative xSpeed *decreases* x, right?
+    }
+  
+  x3 = x3 + x3Speed; // adding a negative xSpeed *decreases* x, right? 
   
   // same as above, but for the top and bottom of the canvas
   if (y3 > width || y3 < 0) {
     y3Speed = y3Speed * -1;  
   }
-  y3 = y3 + y1Speed;
+  y3 = y3 + y3Speed;
 
-   fill(100);
-  rect(x3, y3, 30, 50)
+   fill(11);
+  rect(x3, y3, 30, 50) }
+
+else { 
+  fill(235)// Otherwise, draw an ellipse
+  ellipse(200, 200, 50, 50);
 }
+  
+  if (keyIsPressed) {
+    y1Speed = 0;
+    x1Speed = 0;
+  }
+
+  }
+
+

@@ -15,7 +15,7 @@ function setup() {
 }
 
 function draw() {
-  background(220); // try commenting this out!
+  background(220);  // try commenting this out!
  
   // if x hits the right side or the left side of the canvas,
   // switch directions...
@@ -29,8 +29,7 @@ function draw() {
     y1Speed = y1Speed * -1;  
   }
   y1 = y1 + y1Speed;
-
-  ellipse(x1, y1, d1);
+  ellipse(x1, y1, d1); 
 
   if (x2 > width || x2 < 0) {
     x2Speed = x2Speed * -1;  
@@ -43,6 +42,10 @@ function draw() {
   }
   y2 = y2 + y1Speed;
 
-  ellipse(x2, y2, d2);
-}
+  if (mouseIsPressed == true) {
+    fill(255); // White
+  }
+  else {
+    fill(0);   // Black
 
+  ellipse(x2, y2, d2); } }

@@ -13,7 +13,7 @@ let d2 = 50;      // diameter of the ball
 let x3 = 110 
 let y3 = 5
 let x3Speed = 3
-let y3Speed = 7 
+let y3Speed = 9
 
 
 
@@ -36,6 +36,7 @@ function draw() {
     y1Speed = y1Speed * -1;  
   }
   y1 = y1 + y1Speed;
+  fill(250)
   ellipse(x1, y1, d1); 
 
   if (x2 > width || x2 < 0) {
@@ -47,13 +48,13 @@ function draw() {
   if (y2 > width || y2 < 0) {
     y2Speed = y2Speed * -1;  
   }
-  y2 = y2 + y1Speed;
+  y2 = y2 + y2Speed;
 
   if (mouseIsPressed == true) {
-    fill(random(255)); // White
+    fill(random(200,255)); // random
   }
   else {
-    fill(0);   // Black
+    fill(0);  // Black
   }
   ellipse(x2, y2, d2); 
 
@@ -69,5 +70,6 @@ function draw() {
   }
   y3 = y3 + y1Speed;
 
+   fill(100);
   rect(x3, y3, 30, 50)
 }

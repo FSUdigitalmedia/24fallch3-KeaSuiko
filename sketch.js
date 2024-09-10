@@ -43,7 +43,7 @@ function draw() {
   y2 = y2 + y1Speed;
 
   if (mouseIsPressed == true) {
-    fill(255); // White
+    fill(random(255)); // White
   }
   else {
     fill(0);   // Black
